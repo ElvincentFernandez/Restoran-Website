@@ -1,0 +1,30 @@
+.clients-section {
+  background-color: #f9f9f9; // Latar belakang lembut untuk bagian video
+
+  .separator {
+    border: none; // Menghapus border default dari <hr>
+    border-top: 2px solid brown; // Garis pemisah coklat
+    margin: 1rem 0; // Jarak atas dan bawah garis pemisah
+    width: 100%; // Lebar garis mengikuti lebar container
+    padding: 6px; // Menghapus padding jika tidak diperlukan
+  }
+
+  .clients-title {
+    text-align: center; // Menyelaraskan teks ke tengah
+    font-size: 2rem; // Ukuran font untuk teks
+    color: black; // Warna teks
+    margin: 0; // Menghapus margin untuk mengatur jarak dengan lebih presisi
+  }
+
+  .clients-description {
+    text-align: center; // Menyelaraskan teks ke tengah
+    font-size: 1rem; // Ukuran font untuk teks tambahan
+    color: black; // Warna teks tambahan
+    margin: 1rem 0; // Margin untuk teks tambahan
+    padding: 0 1rem; // Padding horizontal untuk menghindari teks terlalu dekat dengan tepi
+  }
+
+  .video-container {
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,67 @@
+/* TESTIMONI START */
+
+.testimoni {
+    padding: 2rem;
+    background-color: white; // Latar belakang lembut
+    border-top: 2px solid brown; // Garis batas atas
+  
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: black; // Warna judul
+    }
+  
+    .testimoni-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem; // Jarak antar testimoni
+  
+      .testimoni-item {
+        display: flex;
+        align-items: flex-start; // Menyelaraskan item ke atas
+        gap: 1rem;
+        padding: 1rem;
+        border: 1px solid #ddd; // Border sekitar item testimoni
+        border-radius: 8px; // Sudut membulat
+        background-color: #fff; // Warna latar belakang item
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Bayangan untuk efek kedalaman
+        opacity: 0; // Mulai dengan elemen tidak terlihat
+        transform: translateY(-30px); // Mulai dari posisi atas
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out; // Transisi untuk animasi
+  
+        // Untuk animasi slide-in dari atas ke bawah
+        &.visible {
+          opacity: 1; // Menampilkan elemen
+          transform: translateY(0); // Posisi akhir
+        }
+      }
+  
+      .client-image {
+        width: 80px; // Ukuran gambar klien
+        height: 80px; // Ukuran gambar klien
+        border-radius: 50%; // Membulatkan gambar
+        object-fit: cover; // Menjaga rasio aspek gambar
+        border: 2px solid #ddd; // Border sekitar gambar
+      }
+  
+      .testimoni-content {
+        flex: 1; // Mengisi ruang yang tersisa
+        color: #333; // Warna teks
+  
+        p {
+          margin: 0;
+          font-size: 1rem; // Ukuran font untuk testimoni
+          line-height: 1.6; // Jarak antar baris
+          margin-bottom: 0.5rem; // Jarak antara paragraf
+        }
+  
+        .client-name {
+          font-weight: bold; // Menebalkan nama klien
+        }
+      }
+    }
+  }
+  
+  /* TESTIMONI END */
+  

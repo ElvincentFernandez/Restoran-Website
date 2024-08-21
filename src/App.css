@@ -1,0 +1,40 @@
+/* src/App.css atau file CSS utama */
+
+html, body {
+  margin: 0; /* Menghilangkan margin default */
+  padding: 0; /* Menghilangkan padding default */
+  height: 100%; /* Membuat html dan body mengisi seluruh viewport */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.App {
+  flex: 1; /* Membuat App mengambil ruang penuh */
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1; /* Membuat konten utama mengambil ruang yang tersisa */
+  padding-bottom: 60px; /* Sesuaikan dengan tinggi footer */
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  position: relative; /* Letakkan footer di bawah */
+  bottom: 0;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  z-index: 1000; /* Menjaga footer di atas elemen lain */
+}
+
+footer p {
+  font-weight: bold;
+  margin: 0;
+}

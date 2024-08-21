@@ -1,0 +1,178 @@
+.home {
+  padding: 2rem;
+  background-color: #f8f9fa; // Warna latar belakang yang lembut
+
+  .pop-up {
+    opacity: 0; // Mulai dengan opacity 0
+    transform: translateY(20px); // Mulai sedikit di bawah
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .pop-up.active {
+    opacity: 1;
+    transform: translateY(0);
+    animation: popUp 0.5s ease-out;
+  }
+
+  .home-header {
+    display: flex;
+    flex-direction: row; // Mengatur gambar dan teks secara horizontal
+    align-items: flex-start; // Menyusun item di atas
+    text-align: left; // Mengatur teks rata kiri
+    margin-bottom: 2rem; // Memberikan jarak antara bagian header dan bagian selanjutnya
+
+    .home-image {
+      width: 50%; // Menyesuaikan gambar dengan lebar 50% dari container
+      max-width: 500px; // Lebar maksimum gambar
+      height: auto; // Menjaga rasio aspek gambar
+      border-radius: 8px;
+      margin-right: 2rem; // Jarak antara gambar dan teks
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Bayangan untuk memberi efek kedalaman
+      object-fit: cover; // Memastikan gambar memenuhi container tanpa mengubah rasio aspek
+      transition: transform 0.3s ease; // Transisi untuk efek zoom
+    }
+
+    .home-text {
+      max-width: 50%; // Lebar maksimum teks untuk menghindari baris panjang
+      margin: 0;
+      color: black; // Mengatur margin teks
+
+      h1 {
+        font-size: 2.5rem; // Ukuran font untuk judul utama
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1rem; // Ukuran font untuk paragraf
+        line-height: 1.6; // Jarak antara baris untuk keterbacaan
+        margin-bottom: 1rem;
+      }
+    }
+
+    .home-image:hover {
+      transform: scale(1.05); // Zoom in gambar saat item di-hover
+    }
+  }
+
+  .home-section {
+    display: flex;
+    flex-direction: row; // Mengatur gambar di sebelah kiri dan teks di sebelah kanan
+    align-items: flex-start; // Menyusun item di atas
+    text-align: left; // Mengatur teks rata kiri
+
+    .home-image {
+      width: 50%; // Menyesuaikan gambar dengan lebar 50% dari container
+      max-width: 500px; // Lebar maksimum gambar
+      height: auto; // Menjaga rasio aspek gambar
+      border-radius: 8px;
+      margin-right: 2rem; // Jarak antara gambar dan teks
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Bayangan untuk memberi efek kedalaman
+      object-fit: cover; // Memastikan gambar memenuhi container tanpa mengubah rasio aspek
+      transition: transform 0.3s ease; // Transisi untuk efek zoom
+    }
+
+    .home-text {
+      max-width: 50%; // Lebar maksimum teks untuk menghindari baris panjang
+      margin: 0;
+      color: black; // Mengatur margin teks
+
+      p {
+        font-size: 1rem; // Ukuran font untuk paragraf
+        line-height: 1.6; // Jarak antara baris untuk keterbacaan
+        margin-bottom: 1rem;
+      }
+    }
+
+    .home-image:hover {
+      transform: scale(1.05); // Zoom in gambar saat item di-hover
+    }
+  }
+
+  .reserve-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem; // Jarak antara bagian sebelumnya dan tombol reservasi
+
+    .reserve-btn {
+      padding: 0.75rem 2rem; // Ruang dalam tombol
+      font-size: 1.125rem; // Ukuran font
+      color: #fff; // Warna teks tombol
+      background-color: brown; // Warna latar belakang tombol
+      border: none; // Menghilangkan border default
+      border-radius: 5px; // Sudut membulat tombol
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Bayangan untuk efek kedalaman
+      text-transform: uppercase; // Mengubah teks menjadi huruf kapital
+      font-weight: bold; // Menguatkan teks
+      cursor: pointer; // Menunjukkan bahwa tombol bisa diklik
+      transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; // Efek transisi
+
+      &:hover {
+        background-color: black; // Warna latar belakang saat hover
+        transform: translateY(-2px); // Efek angkat sedikit saat hover
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); // Bayangan lebih kuat saat hover
+      }
+
+      &:focus {
+        outline: none; // Menghilangkan outline saat fokus
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); // Menambahkan outline saat fokus
+      }
+
+      &:active {
+        background-color: black; // Warna latar belakang saat diklik
+        transform: translateY(0); // Menghilangkan efek angkat saat diklik
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Bayangan default saat diklik
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .home-header,
+    .home-section {
+      flex-direction: column;
+      text-align: center;
+
+      .home-text {
+        max-width: 100%;
+        margin-bottom: 1rem; // Jarak antara teks dan gambar pada tampilan mobile
+      }
+
+      .home-image {
+        margin: 0 auto; // Memusatkan gambar pada tampilan mobile
+        max-width: 100%;
+        margin-bottom: 2rem; // Jarak antara gambar dan teks pada tampilan mobile
+
+  // Home.scss
+.home-container {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+
+  h1 {
+    color: #333;
+  }
+}
+
+.description-container {
+  margin-top: 20px;
+
+  hr {
+    border: none;
+    height: 2px;
+    background-color: #333;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    color: #555;
+  }
+
+  p {
+    color: #666;
+    font-size: 1rem;
+  }
+}
+
+      }
+    }
+  }
+}

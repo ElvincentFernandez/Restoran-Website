@@ -1,0 +1,107 @@
+// Keyframes untuk animasi slide down
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); // Mulai dari atas
+    visibility: hidden; // Mulai tidak terlihat
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); // Posisi akhir
+    visibility: visible; // Menjadi terlihat
+  }
+}
+
+.location {
+  padding: 2rem; // Menambahkan padding ke seluruh halaman lokasi
+
+  .location-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; // Jarak antara setiap item lokasi
+  }
+
+  .location-item {
+    display: flex;
+    gap: 1rem; // Jarak antara gambar dan detail
+    align-items: center; // Menyusun gambar dan detail di tengah secara vertikal
+    border: 1px solid #ddd; // Batas ringan di sekitar setiap item lokasi
+    padding: 1rem; // Padding dalam item lokasi
+    border-radius: 8px; // Sudut melengkung untuk batas
+    background-color: #f9f9f9; // Latar belakang item lokasi
+    color: black; // Menjadikan teks berwarna hitam
+
+    // Mulai dengan tidak terlihat dan akan muncul satu per satu
+    opacity: 0;
+    transform: translateY(-20px);
+    visibility: hidden; // Mulai tidak terlihat
+    animation: slide-down 1s ease-out forwards; // Terapkan animasi slide down
+
+    // Set delay untuk animasi
+    &:nth-child(1) {
+      animation-delay: 0.5s;
+    }
+    &:nth-child(2) {
+      animation-delay: 0.6s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.7s;
+    }
+    &:nth-child(4) {
+      animation-delay: 0.8s;
+    }
+    &:nth-child(5) {
+      animation-delay: 0.9s;
+    }
+
+    .location-image {
+      width: 150px; // Ukuran gambar
+      height: 100px; // Tinggi gambar
+      object-fit: cover; // Menjaga proporsi gambar
+      border-radius: 8px; // Sudut melengkung untuk gambar
+      transition: transform 1s ease-out; // Transisi untuk efek hover
+    }
+
+    .location-details {
+      flex: 1; // Mengambil ruang yang tersisa
+      color: black; // Menjadikan teks berwarna hitam
+      h2 {
+        margin-top: 0; // Menghapus margin atas dari judul
+        margin-bottom: 0.5rem; // Jarak bawah judul
+        color: black; // Menjadikan teks berwarna hitam
+      }
+      
+      p {
+        margin: 0.25rem 0; // Jarak atas dan bawah paragraf
+        color: black; // Menjadikan teks berwarna hitam
+      }
+      
+      a {
+        color: #007bff; // Warna tautan
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline; // Garis bawah saat hover
+        }
+      }
+    }
+  }
+}
+
+// Untuk gambar dan peta lainnya
+.maps-container, .images-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  opacity: 0; // Mulai dengan tidak terlihat
+  transform: translateY(-20px); // Mulai dari atas
+  visibility: hidden; // Mulai tidak terlihat
+  animation: slide-down 1s ease-out forwards; // Terapkan animasi slide down
+  animation-delay: 1s; // Jeda animasi untuk gambar dan peta lainnya
+  color: black; // Menjadikan teks berwarna hitam
+}
+
+@media (max-width: 768px) {
+  .location-content {
+    flex-direction: column;
+  }
+}
