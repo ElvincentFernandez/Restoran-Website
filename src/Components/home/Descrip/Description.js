@@ -7,7 +7,6 @@ const Description = () => {
       <hr />
       <h2>About Our Restaurant</h2>
       <div className="full-screen-image">
-        {/* Tambahkan gambar jika ada */}
       </div>
       <p>
         Welcome to our restaurant, where we serve delicious Italian cuisine made from the freshest ingredients. 
@@ -26,7 +25,7 @@ const Description = () => {
           <img src="/images/about3.jpg" alt="3" />
         </div>
         <div className="gambaran">
-          <img src="/images/about4.jpg" alt="4" />
+          <img src="/images/about4.jpeg" alt="4" />
         </div>
       </div>
     </div>

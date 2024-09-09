@@ -2,7 +2,7 @@ const testimoni = [
   {
     image: '/images/thomas.jpg',
     text: 'This is an example of a client\'s testimonial. The service was fantastic, and I would highly recommend it to others.',
-    name: 'Thomas Shelby',
+    name: 'Cillian Murphy',
   },
   {
     image: '/images/chris.jpg',
