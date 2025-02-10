@@ -1,0 +1,65 @@
+.navbar {
+  background: brown;
+  padding: 0.5rem 1rem; /* Kurangi padding untuk mengecilkan navbar */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo-container {
+  display: flex;
+  align-items: center;
+}
+.navbar .logo-container .logo {
+  width: 40px; /* Perkecil ukuran logo */
+  height: auto;
+  margin-right: 8px;
+}
+.navbar .logo-container .logo-text {
+  font-size: 1.2rem; /* Perkecil ukuran teks logo */
+  font-weight: 600;
+  color: white;
+}
+.navbar .menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem; /* Kurangi jarak antar menu */
+  padding: 0;
+  margin: 0;
+}
+.navbar .menu li {
+  list-style: none;
+}
+.navbar .menu li .nav-link {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 0.9rem; /* Perkecil ukuran font menu */
+  padding: 0.3rem 0.8rem; /* Kurangi padding menu */
+  transition: all 0.3s ease-in-out;
+}
+.navbar .menu li .nav-link:hover {
+  background: #ffd700;
+  color: brown;
+  border-radius: 4px;
+}
+.navbar .menu li.contact .nav-link {
+  border: 1px solid white;
+  padding: 0.3rem 0.8rem; /* Sesuaikan ukuran tombol */
+  border-radius: 4px;
+}
+.navbar .menu li.contact .nav-link:hover {
+  background: white;
+  color: brown;
+}
+
+/* Media Query untuk Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar .menu {
+    flex-direction: column;
+    gap: 0.5rem; /* Kurangi jarak antar menu untuk tampilan kecil */
+  }
+}/*# sourceMappingURL=navbar.css.map */

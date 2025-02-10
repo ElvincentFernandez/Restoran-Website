@@ -17,7 +17,7 @@ function App() {
         <Navbar />
         <div className="main-content">
           <Routes>
-            <Route path="/" element={<Home />} /> {/* Tambahkan rute untuk Home */}
+            <Route path="/" element={<Home />} />
             <Route path="/menu" element={<Menu />} />
             <Route path="/about-us" element={<AboutUs />} />            
             <Route path="/location" element={<Location />} />

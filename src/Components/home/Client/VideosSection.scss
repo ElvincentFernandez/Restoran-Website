@@ -1,6 +1,14 @@
 .clients-section {
   background-color: #f9f9f9; // Latar belakang lembut untuk bagian video
 
+  .hr{
+    border: none; // Menghapus border default dari <hr>
+    border-top: 2px solid brown; // Garis pemisah coklat
+    margin: 1rem 0; // Jarak atas dan bawah garis pemisah
+    width: 100%; // Lebar garis mengikuti lebar container
+    padding: 6px; // Menghapus padding jika tidak diperlukan
+  }
+
   .separator {
     border: none; // Menghapus border default dari <hr>
     border-top: 2px solid brown; // Garis pemisah coklat

@@ -1,55 +1,162 @@
-// Menu Styling
-.menu {
+.menus {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   padding: 2rem;
-  
-  .menu-category {
-    margin-bottom: 3rem;
 
+  .menu-category {
     h2 {
       font-size: 2rem;
-      margin-bottom: 1rem;
       text-align: center;
-      color: #333;
+      color: #444;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background: brown;
+      margin: 0 auto 2rem;
+      width: 50%;
+    }
+    
+
+    .add-btn {
+      display: block;
+      margin: 0 auto 2rem;
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: white;
+      background-color: #13d847;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+
+      &:hover {
+        background-color: #19b949;
+        transform: translateY(-3px);
+      }
+
+      &:active {
+        background-color: #148f77;
+        transform: translateY(0);
+      }
     }
 
     .menu-items {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 1.5rem;
-      
+      justify-content: center;
+
       .menu-item {
         max-width: 300px;
         width: 100%;
-        text-align: center;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        overflow: hidden;
-        background: #fff;
+        background: #fafafa;
+        border: 1px solid #ccc;
+        border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
         transition: transform 0.3s, box-shadow 0.3s;
 
         &:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          transform: translateY(-8px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
         .menu-item-image {
           width: 100%;
-          height: 200px; // Adjust based on your design
-          object-fit: cover; // Ensure the image covers the box while maintaining its aspect ratio
+          height: 180px;
+          object-fit: cover;
         }
 
-        .menu-item-name {
-          font-size: 1.25rem;
-          margin: 1rem 0;
-          color: #333;
-        }
+        .menu-item-details {
+          padding: 1rem;
 
-        .menu-item-description {
-          font-size: 1rem;
-          color: #666;
-          padding: 0 1rem 1rem;
+          h3 {
+            font-size: 1.5rem;
+            color: #222;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+          }
+
+          p {
+            font-size: 1rem;
+            color: #555;
+            margin: 0.5rem 0;
+          }
+
+          .menu-item-price {
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 1rem;
+          }
+
+          .save-btn,
+          .edit-btn,
+          .delete-btn {
+            display: inline-block;
+            padding: 6px 12px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin: 0.5rem 0.5rem 0 0;
+            border: none;
+
+            &:hover {
+              transform: translateY(-3px);
+            }
+
+            &:active {
+              transform: translateY(0);
+            }
+          }
+
+          .save-btn {
+            background-color: #0275d8;
+            color: white;
+
+            &:hover {
+              background-color: #025aa5;
+            }
+
+            &:active {
+              background-color: #014682;
+            }
+          }
+
+          .edit-btn {
+            background-color: #20c997;
+            color: white;
+
+            &:hover {
+              background-color: #17a589;
+            }
+
+            &:active {
+              background-color: #148f77;
+            }
+          }
+
+          .delete-btn {
+            background-color: #d9534f;
+            color: white;
+
+            &:hover {
+              background-color: #c9302c;
+            }
+
+            &:active {
+              background-color: #ac2925;
+            }
+          }
         }
       }
     }

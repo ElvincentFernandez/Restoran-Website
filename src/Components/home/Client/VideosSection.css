@@ -1,0 +1,33 @@
+.clients-section {
+  background-color: #f9f9f9;
+}
+.clients-section .hr {
+  border: none;
+  border-top: 2px solid brown;
+  margin: 1rem 0;
+  width: 100%;
+  padding: 6px;
+}
+.clients-section .separator {
+  border: none;
+  border-top: 2px solid brown;
+  margin: 1rem 0;
+  width: 100%;
+  padding: 6px;
+}
+.clients-section .clients-title {
+  text-align: center;
+  font-size: 2rem;
+  color: black;
+  margin: 0;
+}
+.clients-section .clients-description {
+  text-align: center;
+  font-size: 1rem;
+  color: black;
+  margin: 1rem 0;
+  padding: 0 1rem;
+}
+.clients-section .video-container {
+  margin-top: 2rem;
+}/*# sourceMappingURL=VideosSection.css.map */

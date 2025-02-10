@@ -2,45 +2,8 @@
 $primary-color: brown;
 $secondary-color: #ffffff;
 
-// Animasi slide-in untuk menu items
-@keyframes slideInMenu {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-// Animasi turun untuk logo
-@keyframes dropInLogo {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-// Animasi pop-up untuk elemen yang muncul saat scroll
-@keyframes popUp {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 .navbar {
-  background-color: $primary-color;
-  padding: 0.5rem; // Tambahkan padding lebih banyak untuk kenyamanan
+  background: $primary-color;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,7 +12,6 @@ $secondary-color: #ffffff;
   .logo-container {
     display: flex;
     align-items: center;
-    animation: dropInLogo 1.5s ease-out;
 
     .logo {
       max-width: 100px;
@@ -72,26 +34,6 @@ $secondary-color: #ffffff;
 
     li {
       list-style: none;
-      opacity: 0;
-
-      &:nth-child(1) {
-        animation: slideInMenu 1s ease-out 0.5s forwards;
-      }
-      &:nth-child(2) {
-        animation: slideInMenu 1s ease-out 0.6s forwards;
-      }
-      &:nth-child(3) {
-        animation: slideInMenu 1s ease-out 0.7s forwards;
-      }
-      &:nth-child(4) {
-        animation: slideInMenu 1s ease-out 0.8s forwards;
-      }
-      &:nth-child(5) {
-        animation: slideInMenu 1s ease-out 0.9s forwards;
-      }
-      &:nth-child(6) {
-        animation: slideInMenu 1s ease-out 1s forwards;
-      }
     }
 
     .nav-link {
@@ -131,7 +73,6 @@ $secondary-color: #ffffff;
 .pop-up.active {
   opacity: 1;
   transform: translateY(0);
-  animation: popUp 0.5s ease-out;
 }
 
 /* MEDIA QUERIES */
@@ -152,7 +93,6 @@ $secondary-color: #ffffff;
       gap: 1.5rem; // Tambahkan sedikit jarak untuk kenyamanan
 
       li {
-        animation: none;
         opacity: 1;
         width: 100%; // Pastikan setiap menu item mengambil seluruh lebar
         text-align: center; // Tengah-tengah kan teks

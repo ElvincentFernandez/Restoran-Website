@@ -21,60 +21,28 @@
         height: auto;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        opacity: 0;
-        transform: translateX(-50px);
-        animation: slide-in 0.8s ease-out forwards;
-        animation-fill-mode: forwards;
+        opacity: 1; /* Gambar terlihat langsung */
+        transform: translateX(0); /* Reset transformasi */
       }
+    }
 
-      .main-image {
-        animation-delay: 0.2s;
-      }
-
-      .gallery-image1 {
-        animation-delay: 0.6s;
-      }
-
-      .gallery-image2 {
-        animation-delay: 1s;
-      }
+    .section-divider {
+      margin: 2rem 0; /* Memberikan jarak atas dan bawah pada garis */
+      border: none; /* Menghapus border default */
+      border-top: 2px solid #ddd; /* Membuat garis horisontal dengan warna dan ketebalan yang ditentukan */
+      width: 100%; /* Lebar penuh */
+      max-width: 1200px; /* Anda bisa menyesuaikan lebar maksimum agar sesuai dengan desain */
+      margin-left: auto; /* Rata tengah di sisi kiri */
+      margin-right: auto; /* Rata tengah di sisi kanan */
     }
 
     .about-us-text {
       max-width: 600px;
       text-align: left;
       color: black;
-      opacity: 0;
-      transform: translateX(-50px);
-      animation: slide-in 0.8s ease-out forwards;
-      animation-fill-mode: forwards;
-
-      &.about-us-text1 {
-        animation-delay: 1s;
-      }
-
-      &.about-us-text2 {
-        animation-delay: 1.4s;
-      }
-
-      &.about-us-text3 {
-        animation-delay: 1.8s;
-      }
-
-      h2 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-      }
-
-      h3 {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-      }
-
-      ul {
-        list-style-type: disc;
-        padding-left: 20px;
-      }
+      opacity: 1; /* Pastikan teks terlihat langsung */
+      transform: translateX(0); /* Reset transformasi */
+      /* Hapus bagian teks 1, 2, 3 */
     }
   }
 
@@ -92,100 +60,74 @@
 
       .main-image, .gallery-image1, .gallery-image2 {
         width: 100%;
-        max-width: 300px; // Batasan lebar maksimum
+        max-width: 300px; /* Batasan lebar maksimum */
       }
     }
 
     .about-us-text {
       width: 100%;
       max-width: 100%;
-      text-align: center; // Atur teks menjadi center untuk tampilan mobile
-
-      h2 {
-        font-size: 1.75rem;
-      }
-
-      h3 {
-        font-size: 1.25rem;
-      }
+      text-align: center; /* Atur teks menjadi center untuk tampilan mobile */
+      display: none; /* Menghilangkan teks pada tampilan mobile */
     }
   }
 }
 
-/* Animasi Slide-in */
-@keyframes slide-in {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.section-divider {
-  border: white;
-  border-top: 2px solid brown;
-  margin: 2rem 0;
-}
-
-/* ABOUT END */
+/* .section-divider tetap tidak terpengaruh */
 
 /* TESTIMONI START */
 
 .testimoni {
   padding: 2rem;
-  background-color: white; // Latar belakang lembut
+  background-color: white; /* Latar belakang lembut */
 
   h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     text-align: center;
-    color: #333; // Warna judul
+    color: #333; /* Warna judul */
   }
 
   .testimoni-container {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem; // Jarak antar testimoni
+    gap: 1.5rem; /* Jarak antar testimoni */
 
     .testimoni-item {
       display: flex;
-      align-items: flex-start; // Menyelaraskan item ke atas
+      align-items: flex-start; /* Menyelaraskan item ke atas */
       gap: 1rem;
       padding: 1rem;
-      border: 1px solid #ddd; // Border sekitar item testimoni
-      border-radius: 8px; // Sudut membulat
-      background-color: #fff; // Warna latar belakang item
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Bayangan untuk efek kedalaman
+      border: 1px solid #ddd; /* Border sekitar item testimoni */
+      border-radius: 8px; /* Sudut membulat */
+      background-color: #fff; /* Warna latar belakang item */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
 
       .client-image {
-        width: 80px; // Ukuran gambar klien
-        height: 80px; // Ukuran gambar klien
-        border-radius: 50%; // Membulatkan gambar
-        object-fit: cover; // Menjaga rasio aspek gambar
-        border: 2px solid #ddd; // Border sekitar gambar
+        width: 80px; /* Ukuran gambar klien */
+        height: 80px; /* Ukuran gambar klien */
+        border-radius: 50%; /* Membulatkan gambar */
+        object-fit: cover; /* Menjaga rasio aspek gambar */
+        border: 2px solid #ddd; /* Border sekitar gambar */
       }
 
       .testimoni-content {
-        flex: 1; // Mengisi ruang yang tersisa
-        color: #333; // Warna teks
+        flex: 1; /* Mengisi ruang yang tersisa */
+        color: #333; /* Warna teks */
 
         p {
           margin: 0;
-          font-size: 1rem; // Ukuran font untuk testimoni
-          line-height: 1.6; // Jarak antar baris
-          margin-bottom: 0.5rem; // Jarak antara paragraf
+          font-size: 1rem; /* Ukuran font untuk testimoni */
+          line-height: 1.6; /* Jarak antar baris */
+          margin-bottom: 0.5rem; /* Jarak antara paragraf */
         }
 
         .client-name {
-          font-weight: bold; // Menebalkan nama klien
+          font-weight: bold; /* Menebalkan nama klien */
         }
       }
     }
   }
 }
-
 
 /* TESTIMONI END */

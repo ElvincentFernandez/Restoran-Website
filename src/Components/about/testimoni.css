@@ -1,0 +1,58 @@
+/* TESTIMONI START */
+.testimoni {
+  padding: 2rem;
+  background-color: white;
+  border-top: 2px solid brown;
+  margin-top: 2rem;
+}
+.testimoni h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: black;
+}
+.testimoni .testimoni-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.testimoni .testimoni-container .testimoni-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.testimoni .testimoni-container .testimoni-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.testimoni .testimoni-container .client-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 2px solid #ddd;
+}
+.testimoni .testimoni-container .testimoni-content {
+  flex: 1;
+  color: #333;
+}
+.testimoni .testimoni-container .testimoni-content p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+.testimoni .testimoni-container .testimoni-content .client-name {
+  font-weight: bold;
+}
+
+/* TESTIMONI END *//*# sourceMappingURL=testimoni.css.map */

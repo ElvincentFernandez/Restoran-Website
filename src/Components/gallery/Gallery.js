@@ -1,6 +1,6 @@
 import React from 'react';
 import './gallery.scss';
-import facilities from '../data/Facilities'; // Pastikan path ini benar
+import facilities from "../data/Facilities"
 
 function Gallery() {
   return (

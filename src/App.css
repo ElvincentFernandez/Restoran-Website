@@ -1,4 +1,13 @@
-/* src/App.css atau file CSS utama */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
 
 html, body {
   margin: 0; /* Menghilangkan margin default */
@@ -17,24 +26,44 @@ body {
   flex-direction: column;
 }
 
+/* Menghilangkan scrollbar di Chrome, Edge, dan Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Menghilangkan scrollbar di Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Pastikan overflow tetap bekerja tanpa scrollbar */
+body {
+  overflow: hidden; /* Jika ingin sepenuhnya tidak bisa di-scroll */
+  /* atau */
+  overflow-y: auto; /* Jika ingin bisa di-scroll tapi tanpa scrollbar */
+}
+
+
 .main-content {
   flex: 1; /* Membuat konten utama mengambil ruang yang tersisa */
   padding-bottom: 60px; /* Sesuaikan dengan tinggi footer */
 }
 
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  position: relative; /* Letakkan footer di bawah */
-  bottom: 0;
-  width: 100%;
-  font-family: Arial, sans-serif;
-  z-index: 1000; /* Menjaga footer di atas elemen lain */
+
+
+@media screen and (min-width: 1240px){
+  .container{
+      width: 80%;
+      margin: auto;
+  }
+
+  .section{
+      padding: 6rem 0 4rem;
+  }
 }
 
-footer p {
-  font-weight: bold;
-  margin: 0;
+@media screen and (min-width: 2560px){
+  .body{
+      zoom: 1.7;
+  }
 }
