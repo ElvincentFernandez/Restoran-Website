@@ -14,11 +14,11 @@
     }
 
     hr {
-      border: none;
-      height: 2px;
-      background: brown;
-      margin: 0 auto 2rem;
-      width: 50%;
+      border: none; // Menghapus border default dari <hr>
+      border-top: 2px solid brown; // Garis pemisah coklat
+      margin: 1rem 0; // Jarak atas dan bawah garis pemisah
+      width: 100%; // Lebar garis mengikuti lebar container
+      padding: 6px; // Menghapus padding jika tidak diperlukan
     }
     
 

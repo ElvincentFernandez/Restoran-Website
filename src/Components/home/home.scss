@@ -19,6 +19,7 @@
     flex-direction: row; // Mengatur gambar dan teks secara horizontal
     align-items: flex-start; // Menyusun item di atas
     text-align: left; // Mengatur teks rata kiri
+    background-color: white;
     margin-bottom: 2rem; // Memberikan jarak antara bagian header dan bagian selanjutnya
 
     .home-image {
@@ -59,6 +60,7 @@
     flex-direction: row; // Mengatur gambar di sebelah kiri dan teks di sebelah kanan
     align-items: flex-start; // Menyusun item di atas
     text-align: left; // Mengatur teks rata kiri
+    background-color: white;
 
     .home-image {
       width: 50%; // Menyesuaikan gambar dengan lebar 50% dari container
