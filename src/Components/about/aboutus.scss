@@ -21,113 +21,49 @@
         height: auto;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        opacity: 1; /* Gambar terlihat langsung */
-        transform: translateX(0); /* Reset transformasi */
+        opacity: 1; 
+        transform: translateX(0); 
       }
-    }
-
-    .section-divider {
-      margin: 2rem 0; /* Memberikan jarak atas dan bawah pada garis */
-      border: none; /* Menghapus border default */
-      border-top: 2px solid #ddd; /* Membuat garis horisontal dengan warna dan ketebalan yang ditentukan */
-      width: 100%; /* Lebar penuh */
-      max-width: 1200px; /* Anda bisa menyesuaikan lebar maksimum agar sesuai dengan desain */
-      margin-left: auto; /* Rata tengah di sisi kiri */
-      margin-right: auto; /* Rata tengah di sisi kanan */
     }
 
     .about-us-text {
       max-width: 600px;
       text-align: left;
       color: black;
-      opacity: 1; /* Pastikan teks terlihat langsung */
-      transform: translateX(0); /* Reset transformasi */
-      /* Hapus bagian teks 1, 2, 3 */
+      opacity: 1; 
+      transform: translateX(0); 
     }
   }
 
   /* Penyesuaian untuk tampilan mobile */
   @media (max-width: 768px) {
     .about-us-content {
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
+      flex-direction: row; /* Tetap horizontal */
+      align-items: flex-start;
+      justify-content: center;
+      flex-wrap: wrap; /* Pastikan tetap sejajar */
     }
 
     .about-us-images {
-      width: 100%;
+      width: auto;
+      display: flex;
+      flex-direction: column;
       align-items: center;
 
       .main-image, .gallery-image1, .gallery-image2 {
         width: 100%;
-        max-width: 300px; /* Batasan lebar maksimum */
+        max-width: 250px; /* Ukuran lebih kecil untuk mobile */
       }
     }
 
     .about-us-text {
       width: 100%;
-      max-width: 100%;
-      text-align: center; /* Atur teks menjadi center untuk tampilan mobile */
-      display: none; /* Menghilangkan teks pada tampilan mobile */
-    }
-  }
-}
-
-/* .section-divider tetap tidak terpengaruh */
-
-/* TESTIMONI START */
-
-.testimoni {
-  padding: 2rem;
-  background-color: white; /* Latar belakang lembut */
-
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    color: #333; /* Warna judul */
-  }
-
-  .testimoni-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem; /* Jarak antar testimoni */
-
-    .testimoni-item {
-      display: flex;
-      align-items: flex-start; /* Menyelaraskan item ke atas */
-      gap: 1rem;
+      max-width: 400px;
+      text-align: left; /* Tetap rata kiri */
+      display: block; /* Teks tetap tampil */
+      font-size: 1rem;
       padding: 1rem;
-      border: 1px solid #ddd; /* Border sekitar item testimoni */
-      border-radius: 8px; /* Sudut membulat */
-      background-color: #fff; /* Warna latar belakang item */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
-
-      .client-image {
-        width: 80px; /* Ukuran gambar klien */
-        height: 80px; /* Ukuran gambar klien */
-        border-radius: 50%; /* Membulatkan gambar */
-        object-fit: cover; /* Menjaga rasio aspek gambar */
-        border: 2px solid #ddd; /* Border sekitar gambar */
-      }
-
-      .testimoni-content {
-        flex: 1; /* Mengisi ruang yang tersisa */
-        color: #333; /* Warna teks */
-
-        p {
-          margin: 0;
-          font-size: 1rem; /* Ukuran font untuk testimoni */
-          line-height: 1.6; /* Jarak antar baris */
-          margin-bottom: 0.5rem; /* Jarak antara paragraf */
-        }
-
-        .client-name {
-          font-weight: bold; /* Menebalkan nama klien */
-        }
-      }
+      line-height: 1.5;
     }
   }
 }
-
-/* TESTIMONI END */
